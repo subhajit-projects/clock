@@ -1,0 +1,60 @@
+.digital_clock {
+    background-color: rgb(49,47,47);
+    width: 600px;
+    height: 200px;
+    border-radius: 25px;
+    color: #fff;
+    border: 5px solid #fff;
+    box-shadow: 0px 0px 10px rgba(255,255,255,0.7), 0px 0px 20px rgba(0,0,0,0.7);
+    font-size: 26px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.digital_clock .dhr,
+.digital_clock .dmn,
+.digital_clock .dss,
+.digital_clock .dampm {
+    margin: 20px;
+    width: 5em;
+    text-align: center;
+    background: -webkit-linear-gradient(#eee, #333);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.digital_clock .dhr,
+.digital_clock .dmn{
+    font-size: 3em;
+}
+
+.digital_clock .dss{
+    font-size: 2em;
+}
+
+/* Blinking */
+@keyframes blink-animation {
+    to {
+      opacity: 0.4;
+    }
+}
+@-webkit-keyframes blink-animation {
+    to {
+        opacity: 1;
+    }
+}
+.dot {
+    font-size: 2em;
+    animation: blink-animation 1s steps(5, start) infinite;
+    -webkit-animation: blink-animation 1s steps(5, start) infinite;
+}
+
+.time_format_change {
+    margin-top: 20px;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+}
