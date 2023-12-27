@@ -15,18 +15,25 @@ function App() {
 
   return (
     <div className="App">
-      <div className='clockspace'>
-        {(digital) ? <Digital /> : <Analog />}
-      </div>      
-      <div className='time_clock_type'>
-        <div className='clock_type'>Change Clock type</div>
-        {/* <div className='clock_type_names'> */}
-          {/* <span>Analog Clock</span> */}
-          {/* <Normalswitch click={changeClockType}/> */}
-          {/* <span>Digital Clock</span> */}
-        {/* </div> */}
-        <Slideswitch off="Digital" on="Analog" id="clock_type" click={changeClockType} />
-      </div>
+      <section>
+        <div className='clockspace'>
+          {(digital) ? <Digital /> : <Analog />}
+        </div>      
+        <div className='time_clock_type'>
+          <div className='clock_type'>Change Clock Type</div>
+          {/* <div className='clock_type_names'> */}
+            {/* <span>Analog Clock</span> */}
+            {/* <Normalswitch click={changeClockType}/> */}
+            {/* <span>Digital Clock</span> */}
+          {/* </div> */}
+          <div className='place_switch_clock_type'>
+            <Slideswitch off="Digital" on="Analog" id="clock_type" click={changeClockType} />
+          </div>
+        </div>
+      </section>
+      <footer>
+        Design & Develop by <span>Subhajit Dey</span>
+      </footer>
     </div>
   );
 }
